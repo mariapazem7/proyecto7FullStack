@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { AuthContext } from "../../../modules/auth/context/AuthContext"
+import { CartIcon } from "../../../modules/cart/components/CartIcon";
 
 
 export const Navbar = () => {
@@ -13,7 +14,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                <h1>Film App</h1>
+                <h1>Book App</h1>
             </div>
             <ul className="navbar__links">
                 <li><Link to="/">Home</Link></li>
@@ -21,6 +22,7 @@ export const Navbar = () => {
                 <li><Link to="/libros">Libros</Link></li>
             </ul>
             <div>
+                <CartIcon />
                 {
                     !user ? (
                         <Link to="/login">Login</Link>

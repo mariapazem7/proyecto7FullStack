@@ -1,7 +1,7 @@
 import { apiClient } from "../../../shared/services/apiClient.js";
 
 
-export const fetchAllBook = async() => {
+export const fetchAllLibros = async() => {
     try {
         const { data } = await apiClient.get('/libros');
         return data;

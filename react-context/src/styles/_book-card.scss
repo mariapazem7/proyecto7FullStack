@@ -1,0 +1,17 @@
+.book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+  
+    .card-title {
+      font-size: 1.1rem;
+      color: #343a40;
+    }
+  
+    .card-subtitle {
+      font-size: 0.9rem;
+    }
+  }
