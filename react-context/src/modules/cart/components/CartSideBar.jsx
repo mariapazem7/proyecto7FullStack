@@ -2,6 +2,7 @@ import { envLoader } from "../../../config/envLoader";
 import { formatCurrency } from "../../../shared/utils/formatCurrency";
 import useCartContext from "../context/CartContext";
 import { CartLibro } from "./CartItem"; 
+import { MercadoPagoButton } from "../../payments/components/MercadoPagoButton"; 
 
 const { optionsCurrency } = envLoader;
 
@@ -26,7 +27,13 @@ export const CartSideBar = ({ onClose }) => {
 
       <div
         className="position-fixed top-0 end-0 bg-white shadow p-3"
-        style={{ width: "350px", height: "100vh", zIndex: 1045, overflowY: "auto" }}
+        style={{ 
+          width: "350px", 
+          height: "100vh", 
+          zIndex: 1045, 
+          overflowY: "auto", 
+          fontFamily: '"Lexend", sans-serif' 
+        }}
       >
         <div className="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
           <h5 className="mb-0">Carrito de Libros</h5>
@@ -53,19 +60,21 @@ export const CartSideBar = ({ onClose }) => {
                 <span>{formatCurrency(precioTotal, optionsCurrency)}</span>
               </div>
 
-              <div className="mt-3 d-grid gap-2">
-                <button
-                  onClick={handleCheckout}
-                  className="btn btn-success"
-                >
-                  Finalizar compra
-                </button>
+              <div className="mt-3">
+                  <MercadoPagoButton
+                    cart={libros}
+                    total={precioTotal}
+                    onPaymentSuccess={handleCheckout}
+                  />
+              </div>
+
+              <div className="mt-3 text-center">
                 <button
                   onClick={vaciarCarrito}
-                  className="btn btn-outline-danger"
+                  className="btn btn-link text-primary"
                 >
-                  Vaciar carrito
-                </button>
+                Vaciar carrito
+               </button>
               </div>
             </div>
           </>

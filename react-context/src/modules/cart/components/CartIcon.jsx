@@ -18,7 +18,7 @@ export const CartIcon = () => {
         className="btn p-2 text-secondary"
         aria-label="Abrir carrito"
       >
-        <img src={cartSvg} alt="Carrito" style={{ width: "28px", height: "28px" }} />
+       <img src={cartSvg} alt="Carrito" style={{ width: "28px", height: "28px", filter: "invert(1)" }}/>
 
         {totalLibros > 0 && (
           <span

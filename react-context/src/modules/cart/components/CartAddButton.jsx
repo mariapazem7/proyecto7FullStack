@@ -11,7 +11,8 @@ export const CartAddButton = ({ libro }) => {
   return (
     <button
       onClick={handleAddToCart}
-      className="btn btn-primary"
+      className="btn"
+      style={{ backgroundColor: "#00A8E8", color: "white", border: "none", fontFamily: '"Lexend", sans-serif' }}
     >
       Agregar al carrito
     </button>
