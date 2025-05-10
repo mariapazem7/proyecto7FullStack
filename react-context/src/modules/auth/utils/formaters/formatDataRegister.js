@@ -14,7 +14,6 @@ export const formatDataRegister = (formData) => {
       }
     });
     
-    
     if (formData.imagen instanceof File) {
       formDataToSend.append("file", formData.imagen);
     }

@@ -25,7 +25,7 @@ export const CardLibro = ({ libro }) => {
             <h5 className="card-title" style={{ fontFamily: '"Lexend", sans-serif', color: '#333' }}>
               {libro.titulo}
             </h5>
-            {/* NUEVO O USADO */}
+         
             <span
               className={`badge ${libro.uso === 'nuevo' ? 'bg-info' : 'bg-secondary'} text-uppercase`}
               style={{ fontSize: '0.6rem', fontFamily: '"Lexend", sans-serif', marginBottom: '0.5rem' }}
