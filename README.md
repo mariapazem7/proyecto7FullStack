@@ -1,4 +1,4 @@
-# proyecto7FullStack: Frontend ReLectores App
+# proyecto 7 FullStack: Frontend ReLectores App
 
 Es una aplicación web Fullstack desarrollada como proyecto educativo, orientada a facilitar el acceso a la lectura mediante la compra de libros nuevos y usados a bajo costo. Esta plataforma permite a los usuarios explorar un catálogo, autenticarse mediante registro e inicio de sesión, gestionar su carrito y realizar pagos a través de MercadoPago.
 
