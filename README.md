@@ -47,61 +47,126 @@ react-context/
 ├── node_modules/
 ├── public/
 ├── src/
-│   ├── config/
-│   │   ├── db.config.js
-│   │   ├── envs.config.js
-│   │   └── mercadoPago.config.js
-│   │   
-│   ├── coontrollers/
-│   │   ├── auth.controller.js
-│   │   ├── libros/controller.js
-│   │   └── payment.controller.js
-│   │   
-│   ├── Error/
-│   │   ├── CustomError.js
-│   │   └── TypeError.js    
-│   │   
-│   ├── middlewares/ 
-│   │   ├── auth.middleware.js
-│   │   ├── errorhandler.js
-│   │   ├── uploadFile.middleware.js
-│   │   └── verifyAdmin.middleware.js
-│   │
-│   ├── model/
-│   │   ├── Libro.models.js
-│   │   └── Usuario.model.js
-│   │
-│   ├── routers/ 
-│   │   ├── auth.routes.js
-│   │   ├── index.routes.js
-│   │   ├── libros.routes.js
-│   │   └── payments.routes.js
-│   │      
-│   ├── services/
-│   │   ├── db
-│   │   │   └── updateDocs.js
-│   │   ├── files
-│   │   │   └── multerConfig.js
-│   │   ├── payments
-│   │   │   └── mercadopago.service.js
-│   │   ├── auth.srvice.js
-│   │   └── libros.service.js
+│   ├── assets
+│   │   ├── cart.svg
+│   │   ├── flechaAdelante.svg
+│   │   ├── flechaAtras.svg
+│   │   ├── flibrito.jpg.svg
+│   │   ├── preview.svg
+│   │   └── react.svg
 │   │ 
-│   ├── utils/
-│   │   └── db
-│   │       ├── formateUserCreate.js
-│   │       ├── hashPassword.js
-│   │       ├── validateLibroCrate.js
-│   │       └── validateLibroUpdate.js
-│   │        
-│   └──server.js
-│  
-├── .enve.templete
+│   ├── config/
+│   │   └── envLoader.js
+│   │ 
+│   ├── modules/
+│   │   ├── auth
+│   │   │    ├── components.js
+│   │   │    │   ├── LoginForm
+│   │   │    │   │   └── LoginForm.jsx
+│   │   │    │   │ 
+│   │   │    │   └── Register
+│   │   │    │        ├── FormField.jsx
+│   │   │    │        └── LoginForm.jsx
+│   │   │    │  
+│   │   │    ├── context
+│   │   │    │   ├── AuthContext.js
+│   │   │    │   ├── AuthGlobalState.jsx
+│   │   │    │   └── authRecucer.js
+│   │   │    │
+│   │   │    ├── hooks
+│   │   │    │   └── userValidateRegisterForm.js
+│   │   │    │ 
+│   │   │    ├── pages
+│   │   │    │    ├── Login
+│   │   │    │    │  └── Login.jsx
+│   │   │    │    └── Register
+│   │   │    │          └── Register.jsx
+│   │   │    └──services         
+│   │   │    │     └── authApiService.js
+│   │   │    │
+│   │   │    └──  utils
+│   │   │          ├── formaters
+│   │   │          │    └── formatDataRegister.js
+│   │   │          ├── types
+│   │   │          │    └── initialFormState.js
+│   │   │          └── Validatoor
+│   │   │                └── registerRuler.js
+│   │   ├── cart
+│   │   │    ├──  components
+│   │   │    │    ├── CartAddButton.jsx
+│   │   │    │    ├── CartIcon.jsx
+│   │   │    │    ├── CartItem.jsx
+│   │   │    │    └── CartSideBar.jsx
+│   │   │    │
+│   │   │    └──context         
+│   │   │         └── CartContext.js
+│   │   │
+│   │   ├── libros
+│   │   │    ├── components.js
+│   │   │    │   └── CardLibro.jsx
+│   │   │    │    
+│   │   │    ├── context
+│   │   │    │   ├── AuthContext.js
+│   │   │    │   ├── AuthGlobalState.jsx
+│   │   │    │   └── authRecucer.js
+│   │   │    │
+│   │   │    ├── hooks
+│   │   │    │   └── userFetchLibros.js
+│   │   │    │ 
+│   │   │    ├── pages
+│   │   │    │   └── LibrosPage.jsx
+│   │   │    │         
+│   │   │    └── services         
+│   │   │    │   └── LibrosApiService.js
+│   │   │    │ 
+│   │   │    └── utils
+│   │   │        └── FormatCartLibro.js
+│   │   │ 
+│   │   └── payments
+│   │        ├── components
+│   │        │   ├── MercadoPagoStatus.jsx
+│   │        │   └── MercadoPagoStatus.jsx
+│   │        │
+│   │        ├──  services
+│   │        │   └──paymentService.js.jsx
+│   │        │
+│   │        └── utils
+│   │            ├── index.js
+│   │            ├── messages.js
+│   │            └── stylesFormat.js
+│   ├── router/
+│   │   └── AppRouter.jsx    
+│   │   
+│   ├── shared/
+│   │        ├── components
+│   │        │   ├── Footer
+│   │        │   │   └── Footer.jsx
+│   │        │   └── Navbar
+│   │        │   │    └── Navbar.jsx
+│   │        │   └── ImageUploader.jsx
+│   │        ├── pages
+│   │        │   ├── AboutPage.jsx
+│   │        │   └── HomePage.jsx 
+│   │        ├── service
+│   │        │   └── apiClient.js
+│   │        └── utils
+│   │             └── formatCurrency.js       
+│   └──styles/
+│      ├── _book-card.scss
+│      └── custom.scss
+│ 
+├── App.css
+├── App.jsx
+├── index.css   
+├── main.jsx 
+├── .env.templete
 ├── .gitignore
 ├── eslint.config.js
+├── index.html
 ├── package-lock.json
 ├── package.json
-└── README.md
+├── README.md
+└── vite.config.js
 
 
 ```
