@@ -114,7 +114,7 @@ react-context/
 
 ---
 
-# Consideraciones de instalación
+## Consideraciones de instalación
 
 ## Variables de Entorno (.env)
 
