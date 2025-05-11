@@ -31,7 +31,7 @@ Es una aplicación web Fullstack desarrollada como proyecto educativo, orientada
 
 ---
 
-## 🧠 Objetivos de Aprendizaje
+## Objetivos de Aprendizaje
 
 - Implementar un flujo completo de autenticación con JWT.
 - Construir un CRUD funcional para productos (libros).
