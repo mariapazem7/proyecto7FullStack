@@ -127,7 +127,7 @@ VITE_LOCALE=es-CL
 VITE_MINIMUM_FRACTION_DIGITS=0
 VITE_MAXIMUM_FRACTION_DIGITS=0
 VITE_MP_PUBLIC_KEY=TEST-xxxxxxxxxxxxxxxx (mercadopago dev)
-
+```
 Para el backend:
 
 Accede al backend en el repositorio: https://github.com/mariapazem7/backendProyecto7FullStack.git
