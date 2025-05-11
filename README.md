@@ -42,7 +42,6 @@ Es una aplicación web Fullstack desarrollada como proyecto educativo, orientada
   
 ## Estructura del Proyecto
 
-# proyectoUDDMongoDB
 ```bash
 react-context/
 ├── node_modules/
