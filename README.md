@@ -114,9 +114,9 @@ react-context/
 
 ---
 
-## Consideraciones de instalación
+# Consideraciones de instalación
 
-# Variables de Entorno (.env)
+## Variables de Entorno (.env)
 
 Crea un archivo `.env` siguiendo este ejemplo:
 
